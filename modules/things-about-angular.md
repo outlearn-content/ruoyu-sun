@@ -73,8 +73,7 @@ These all have something to do with `$scope`. But more importantly, when your co
 
 FYI, the answer to the two questions above are: for 1, you need `$scope.$apply()` and for 2, Angular.js creates a scope implicitly in `ng-repeat`.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Write a file using fs.writeFile.\", \"deliverable\" : \"Paste below your code that writes a file using fs.writeFile.\" }"-->
-
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Fix the two code examples above.\", \"deliverable\" : \"Post your rewritten code examples.\" }"-->
 
 
 
