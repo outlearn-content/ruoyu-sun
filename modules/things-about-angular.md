@@ -8,13 +8,14 @@ license : "All Rights Reserved"
 
 <!-- @section -->
 
+# Things to know about Angular.js
+
 ## Background
 
 Recently I have worked on a project using Angular.js. As of writing this post, it’s a medium sized app (~10 modules, ~20 controllers, ~5 services and ~10 directives) with quite decent test coverage. When I look back, I find myself learning much more about Angular.js than before. It’s not a smooth ride: I’ve gone through lots of refactor and rewrite. And there are lots of things I wish I were told before I started to work on Angular.js
 
 **Heads up! The post is based on Angular.js stable branch (1.0.x). Some of the content might not apply if you choose to live on the edge (1.1.x).**
 
-<!-- @section -->
 
 ## About Learning Curve
 
@@ -24,7 +25,8 @@ However, Angular.js is very different. The initial barrier to get started is ver
 
 The problem is when you dive into Angular.js and start to write some serious app, the learning curve suddenly becomes very steep and its documentations are either incomplete or cumbersome. It took quite some time to get over this stage and started to benefit from all these learning. This is the first thing I wish I were told - so that I would not feel frustrated when I had all these problems.
 
-<!-- @section -->
+
+
 
 ## Understand Modules Before You Start
 
@@ -34,7 +36,10 @@ So I had to stop and refactor my code. I first split controllers into different 
 
 So if you do not want to go through the refactor, learn and plan your modules before you start.
 
-<!-- @section -->
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about <a href="https://docs.angularjs.org/guide/module">modules</a> in the official Angular guide. \"}"-->
+
+
+
 
 ## When Your Controllers Get Bigger, Learn Scope
 
@@ -71,11 +76,12 @@ These all have something to do with `$scope`. But more importantly, when your co
 
 FYI, the answer to the two questions above are: for 1, you need `$scope.$apply()` and for 2, Angular.js creates a scope implicitly in `ng-repeat`.
 
-<!-- @section -->
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Fix the two code examples above.", \"deliverable\" : \"Post your rewritten code examples.\" }"-->
+
 
 ## When You Manipulate DOM in Controller, Write Directives
 
-Angular.js advocates separation of controller and view (DOM). But there are cases when you might need access to DOM in controllers. A typical example is jQuery plugins. Although jQuery plugins seem a little bit “outdated”, the ecosystem is not going away time soon. However, it’s really a bad idea to use jQuery plugin directly in your controller: you are making your controller impossible to test and you can hardly reuse any logic.
+Angular.js advocates separation of controller and view (DOM). But there are cases when you might need access to DOM in controllers. A typical example is jQuery plugins. Although jQuery plugins seem a little bit “outdated”, the ecosystem is not going away any time soon. However, it’s really a bad idea to use jQuery plugin directly in your controller: you are making your controller impossible to test and you can hardly reuse any logic.
 
 The best way to deal with it is writing your own directive. I am sure you’ve used directives, but you might not think you can write one. In fact, directives are one of the most powerful concepts in Angular.js. Think of it as reusable components: not only for jQuery plugins, but also for any of your (sub) controllers that get used in multiple places. It’s kinda like shadow DOM. And the best part is, your controller does not need to know the existence of directives: communications are achieved through scope sharing and `$scope` events.
 
@@ -83,19 +89,21 @@ However, the documentation on directives is probably one of the _worst_ Angular.
 
 For any of you who look for a word of wisdom, here is my one sentence summary: put control logic in directive controller, and DOM logic in link function; scope sharing is the glue.
 
-<!-- @section -->
+
 
 ## Angular.js Router Might Not Be What You Expected
 
 This is one of the gotchas that takes me some time of figure out. Angular.js router has a very specific usage. It’s not like Backbone.js router where it monitors the `location.hash` and call a function when the route matches. Angular.js works like server-side router: it is built to work with `ng-view`. When a route is hit, a template is loaded and injected into `ng-view` and some controller can be instantiated. So if you don’t like this behavior, you have to roll out your own service (wrap some existing library into a Angular.js service).
 
-This is not a generic tips, rather, it is very specific. However, I wasted lots of time on this so I just put it here and it might save you a few hours.
+This is not a generic tip, rather, it is very specific. However, I wasted lots of time on this so I just put it here and it might save you a few hours.
 
-<!-- @section -->
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about <a href="https://docs.angularjs.org/api/ngRoute/service/$route">routes</a> in the official Angular documentation \"}"-->
+
+
 
 ## About Testing
 
-Since Angular.js advocates separation of view and controller. Writing unit tests on controller is very easy: no DOM is needed at all. Again, the purpose of unit test is not to guarantee that your app runs without a problem - that’s the purpose of integration tests. Unit tests are used to quickly locate the buggy code when your integration tests fail. The only unit test that requires some DOM manipulation is directive.
+Since Angular.js advocates separation of view and controller, writing unit tests on controller is very easy: no DOM is needed at all. Again, the purpose of unit test is not to guarantee that your app runs without a problem - that’s the purpose of integration tests. Unit tests are used to quickly locate the buggy code when your integration tests fail. The only unit test that requires some DOM manipulation is directive.
 
 Because there is dependency injection, when writing your controller unit tests, you can easily use a mock for one of the dependencies, which makes assertions much easier. A typically way to do this is use a mock when instantiate your controller. Or since Angular.js DI uses _last win rule_, you can rebind (override) your dependency by registering a fake implementation in the tests.
 
