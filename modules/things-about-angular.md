@@ -36,10 +36,10 @@ So I had to stop and refactor my code. I first split controllers into different 
 
 So if you do not want to go through the refactor, learn and plan your modules before you start.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about <a href="https://docs.angularjs.org/guide/module">modules</a> in the official Angular guide. \"}"-->
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about in the official Angular guide. \"}"-->
 
 
-
+<!-- <a href="https://docs.angularjs.org/guide/module">modules</a>  -->
 
 ## When Your Controllers Get Bigger, Learn Scope
 
@@ -97,9 +97,9 @@ This is one of the gotchas that takes me some time of figure out. Angular.js rou
 
 This is not a generic tip, rather, it is very specific. However, I wasted lots of time on this so I just put it here and it might save you a few hours.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about <a href="https://docs.angularjs.org/api/ngRoute/service/$route">routes</a> in the official Angular documentation \"}"-->
+<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about  in the official Angular documentation \"}"-->
 
-
+<!-- <a href="https://docs.angularjs.org/api/ngRoute/service/$route">routes</a> -->
 
 ## About Testing
 
