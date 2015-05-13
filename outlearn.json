@@ -6,7 +6,7 @@
 
   "modules" : [
     {
-      "olm" : "./modules/things-about-angular"
+      "olm" : "./modules/things-about-angular.md"
     }
   ],
 
