@@ -1,10 +1,14 @@
 <!--
-name: things-about-angular
-version : "0.1"
-title : "Things I Wish I Were Told About Angular.js"
-description: "Get started with Angular the right way."
-privacy : "public"
-license : "All Rights Reserved"
+{
+"name" : "things-about-angular",
+"version" : "0.1",
+"title" : "Things I Wish I Were Told About Angular.js",
+"description": "Get started with Angular the right way.",
+"privacy" : "public",
+"freshnessDate" : 2013-05-25,
+"homepage" : "http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html",
+"license" : "All Rights Reserved"
+}
 -->
 
 <!-- @section -->
