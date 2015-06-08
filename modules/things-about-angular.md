@@ -105,7 +105,7 @@ This is not a generic tip, rather, it is very specific. However, I wasted lots o
 You can read about <a href="https://docs.angularjs.org/api/ngRoute/service/$route">routes</a> in the official Angular API docs.
 
 
-<!-- @task, "hasDeliverable" : true, "text" : "Read about routes in the official Angular documentation."-->
+<!-- @task, "text" : "Read about routes in the official Angular documentation."-->
 
 
 
