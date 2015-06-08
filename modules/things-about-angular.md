@@ -42,8 +42,7 @@ So if you do not want to go through the refactor, learn and plan your modules be
 
 You can read about <a href="https://docs.angularjs.org/guide/module">modules</a> in the official Angular guide.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about modules in the official Angular documentation. \"}"-->
-
+<!-- @task, "text" : "Read about modules in the official Angular documentation."-->
 
 
 ## When Your Controllers Get Bigger, Learn Scope
@@ -53,23 +52,23 @@ I am sure you use `$scope` at the very beginning, but probably not understand it
 Why my view will not get updated?
 
     function SomeCtrl($scope) {
-    	setTimeout(function() {
-    		$scope.message = "I am here!";
-    	}, 1000);
+      setTimeout(function() {
+        $scope.message = "I am here!";
+      }, 1000);
     }
 
 Why `ng-model="touched"` does not work as expected?
 
     function SomeCtrl($scope) {
-    	$scope.items = [{ value: 2 }];
-    	$scope.touched = false;
+      $scope.items = [{ value: 2 }];
+      $scope.touched = false;
     }
 
     <ul>
-    	<li ng-repeat="item in items">
-    		<input type="text" ng-model="item.value">
-    		<input type="checkbox" ng-model="touched">
-    	</li>
+      <li ng-repeat="item in items">
+        <input type="text" ng-model="item.value">
+        <input type="checkbox" ng-model="touched">
+      </li>
     </ul>
 
 These all have something to do with `$scope`. But more importantly, when your controllers get bigger and bigger, it’s time to break it into sub controllers, and inheritance is closely related to `$scope`. You need to understand how `$scope` works:
@@ -81,7 +80,7 @@ These all have something to do with `$scope`. But more importantly, when your co
 
 FYI, the answer to the two questions above are: for 1, you need `$scope.$apply()` and for 2, Angular.js creates a scope implicitly in `ng-repeat`.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Fix the two code examples about scope.\", \"deliverable\" : \"Post your rewritten code examples below.\" }"-->
+<!-- @task, "hasDeliverable" : true, "text" : "Fix the two code examples about scope and submit your rewritten code examples."-->
 
 
 
@@ -105,7 +104,8 @@ This is not a generic tip, rather, it is very specific. However, I wasted lots o
 
 You can read about <a href="https://docs.angularjs.org/api/ngRoute/service/$route">routes</a> in the official Angular API docs.
 
-<!-- @asset, "contentType" : "outlearn/prototype-feature", "text" : "{ \"task\": \"Read about routes in the official Angular documentation. \"}"-->
+
+<!-- @task, "hasDeliverable" : true, "text" : "Read about routes in the official Angular documentation."-->
 
 
 
