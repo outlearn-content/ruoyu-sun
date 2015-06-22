@@ -117,7 +117,11 @@ Because there is dependency injection, when writing your controller unit tests, 
 
 Angular.js also have a E2E test, which might not be easy to setup and run, especially your page is rendered by some server-side language first before JavaScript takes control. After spending quite some time on setting this up, I eventually gave up and fell back using Selenium tests as a higher level of integration tests.
 
-
+| Field | Description                                            |
+| ----- | ------------------------------------------------------ |
+| name  | used for the database, must be unique for your user account or organization |
+| title | shown at the top of Path cards                         |
+| description | shown on the Path card as additional information |
 
 |Features / Recipe type | Factory | Service | Value | Constant | Provider |
 |-- | -- | -- | -- | -- | -- |
