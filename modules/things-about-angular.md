@@ -116,3 +116,13 @@ Since Angular.js advocates separation of view and controller, writing unit tests
 Because there is dependency injection, when writing your controller unit tests, you can easily use a mock for one of the dependencies, which makes assertions much easier. A typically way to do this is use a mock when instantiate your controller. Or since Angular.js DI uses _last win rule_, you can rebind (override) your dependency by registering a fake implementation in the tests.
 
 Angular.js also have a E2E test, which might not be easy to setup and run, especially your page is rendered by some server-side language first before JavaScript takes control. After spending quite some time on setting this up, I eventually gave up and fell back using Selenium tests as a higher level of integration tests.
+
+
+
+|Features / Recipe type | Factory | Service | Value | Constant | Provider |
+|-- | -- | -- | -- | -- | -- |
+|can have dependencies | yes | yes | no | no | yes |
+|uses type friendly injection | no | yes | yes* | yes* | no |
+|object available in config phase | no | no | no | yes | yes** |
+|can create functions | yes | yes | yes | yes | yes |
+|can create primitives | yes | no | yes | yes | yes |
