@@ -2,6 +2,16 @@
   "olpVersion" : "0.1",
 
   "paths" : [
+    {
+      "name" : "all-modules",
+      "title" : "All Modules by Ruoyu Sun",
+      "description" : "See in one place all the modules published by Ruoyu Sun.",
+      "coverImage" : "https://raw.githubusercontent.com/outlearn-content/assets/master/space.jpg",
+      "privacy" : "public",
+      "pages" : [
+        {"module" : "things-about-angular"}
+      ]
+    }
   ],
 
   "modules" : [
