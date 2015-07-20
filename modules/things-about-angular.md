@@ -6,6 +6,7 @@
 "description": "Get started with Angular the right way.",
 "freshnessDate" : 2013-05-25,
 "homepage" : "http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html",
+"canonicalSource" : "http://ruoyusun.com/2013/05/25/things-i-wish-i-were-told-about-angular-js.html",
 "license" : "All Rights Reserved"
 }
 -->
